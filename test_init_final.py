@@ -560,7 +560,7 @@ async def on_ready():
 	
 	if basicSetting[6] != "" and basicSetting[7] != "" :
 		#print ('join channel')
-		await JointheVC(client.get_channel(basicSetting[6]), client.get_channel(basicSetting[7]))
+		#await JointheVC(client.get_channel(basicSetting[6]), client.get_channel(basicSetting[7]))
 		await client.get_channel(basicSetting[7]).send('< 텍스트채널 [' + client.get_channel(basicSetting[7]).name + '] 접속완료>', tts=False)
 		await client.get_channel(basicSetting[7]).send('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>', tts=False)
 		await client.get_channel(basicSetting[7]).send('< 보탐봇 재시작 설정시간 ' + basicSetting[4] + '시 ' + basicSetting[5] + '분입니다. >', tts=False)
@@ -645,7 +645,7 @@ async def on_message(msg):
 			
 		if basicSetting[6] != "":
 			#print ('join channel')
-			await JointheVC(client.get_channel(basicSetting[6]), channel)
+			#await JointheVC(client.get_channel(basicSetting[6]), channel)
 			await client.get_channel(channel).send('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>', tts=False)
 		else:
 			#print ('join no')
@@ -1063,7 +1063,7 @@ async def on_message(msg):
 					task1.cancel()
 					print ('task cancle')
 
-				await JointheVC(voice_channel, channel)
+				#await JointheVC(voice_channel, channel)
 				await client.get_channel(channel).send('< 음성채널 [' + client.get_channel(voice_channel.id).name + '] 접속완료>', tts=False)
 		
 		##################################
